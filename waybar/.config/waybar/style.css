@@ -1,0 +1,109 @@
+@import "mocha.css";
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 16px;
+    min-height: 0;
+}
+
+#waybar {
+    background: transparent;
+    color: @text;
+    margin: 5px 5px;
+}
+
+#workspaces {
+    border-radius: 1rem;
+    margin: 5px;
+    background-color: @surface0;
+    margin-left: 1rem;
+}
+
+#workspaces button {
+    color: @text;
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+
+#workspaces button.active {
+    color: @sapphire;
+    border-radius: 1rem;
+}
+
+#workspaces button:hover {
+    color: @green;
+    border-radius: 1rem;
+}
+
+#clock {
+    border-radius: 1rem;
+    margin: 5px;
+    background-color: @surface0;
+    padding: 0.5rem 1rem;
+    color: @text;
+}
+
+#tray,
+#pulseaudio,
+#wireplumber,
+#idle_inhibitor,
+#power-profiles-daemon,
+#backlight,
+#battery {
+    background-color: @surface0;
+    padding: 0.5rem 1rem;
+    margin: 5px 0;
+}
+
+#tray {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+#pulseaudio {
+    color: @maroon;
+    border-radius: 1rem 0px 0px 1rem;
+}
+
+#idle_inhibitor {
+    color: @rosewater
+}
+
+#idle_inhibitor.activated {
+    color: @mauve;
+}
+
+#power-profiles-daemon {
+    color: @blue;
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+}
+
+#power-profiles-daemon.balanced {
+    color: @blue;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green;
+}
+
+#backlight {
+    color: @yellow;
+}
+
+#battery {
+    color: @green;
+    border-radius: 0px 1rem 1rem 0px;
+    margin-right: 1rem;
+}
+
+#battery.charging {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @red;
+}
