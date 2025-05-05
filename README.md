@@ -4,6 +4,10 @@
 
 Modern Hyprland rice with Catppuccin theme.
 
+- Variant: Mocha
+- Accent Color: Sapphire
+- Secondary Color: Green
+
 ## Howto
 
 > Before applying this config, please make sure to read the configs and modify for your use case. I do not guarantee this config to work on every machine.
