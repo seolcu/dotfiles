@@ -11,3 +11,4 @@ Modern Hyprland rice with Catppuccin theme.
 1. clone this repo to your home directory
 2. cd into this directory
 3. run `stow *` to copy all configs as symlink.
+4. For GTK theme, follow instructions [here](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme)
