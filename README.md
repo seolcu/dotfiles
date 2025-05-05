@@ -4,11 +4,21 @@
 
 Modern Hyprland rice with Catppuccin theme.
 
+## Color Info
+
+- Colorscheme: Catppuccin
 - Variant: Mocha
 - Accent Color: Sapphire
 - Secondary Color: Green
 
-## Howto
+## Other materials
+
+- **Wallpaper**: [github: walls-catppuccin-mocha](https://github.com/orangci/walls-catppuccin-mocha/blob/master/abstract-swirls.jpg)
+- **GTK Theme**: [Catppuccin GTK theme](https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme)
+- **Icon Theme**: Adwaita
+- **Fonts**: [JetBrainsMono Nerd Font](https://www.nerdfonts.com/font-downloads)
+
+## How-to
 
 > Before applying this config, please make sure to read the configs and modify for your use case. I do not guarantee this config to work on every machine.
 
