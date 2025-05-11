@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk ttf-jetbrains-mono-nerd git github-cli stow htop fastfetch neovim flatpak starship firefox nautilus evince obsidian prismlauncher imv mpv proton-vpn-gtk-app 
+sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk ttf-jetbrains-mono-nerd git github-cli stow htop fastfetch neovim flatpak firefox nautilus evince obsidian prismlauncher imv mpv proton-vpn-gtk-app 
 
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
@@ -18,6 +18,14 @@ systemctl --user enable --now hyprpolkitagent
 systemctl --user enable --now waybar
 systemctl --user enable --now hyprpaper
 systemctl --user enable --now hypridle
+
+# Bluetooth
+sudo pacman -S --noconfirm --needed bluez bluez-utils blueberry
+sudo systemctl enable --now bluetooth
+
+# Starship
+sudo pacman -S --noconfirm --needed starship
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # Virtualization
 sudo pacman -S --noconfirm --needed libvirt dnsmasq openbsd-netcat virt-manager qemu-full
@@ -41,3 +49,10 @@ flatpak override --user --filesystem=xdg-config/gtk-4.0
 sudo flatpak override --filesystem=xdg-config/gtk-4.0
 cd ../..
 rm -rf Catppuccin-GTK-Theme
+
+# Add Hyprland autostart script to ~/.bash_profile
+cat <<EOF >> ~/.bash_profile
+if uwsm check may-start; then
+    exec uwsm start hyprland.desktop
+fi
+EOF
