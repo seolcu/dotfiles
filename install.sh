@@ -36,7 +36,8 @@ sudo systemctl enable --now libvirtd.socket
 sudo usermod -aG libvirt $USER
 
 # Gaming
-sudo pacman -S --noconfirm --needed steam ttf-liberation gamemode lib32-gamemode gamescope
+# needs confirm: selection of video drivers
+sudo pacman -S --needed steam ttf-liberation gamemode lib32-gamemode gamescope
 sudo usermod -aG gamemode $USER
 echo "vm.max_map_count = 2147483642" | sudo tee /etc/sysctl.d/80-gamecompatibility.conf
 
