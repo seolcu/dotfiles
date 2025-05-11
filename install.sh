@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk ttf-jetbrains-mono-nerd git github-cli stow htop fastfetch neovim flatpak firefox nautilus evince obsidian prismlauncher imv mpv proton-vpn-gtk-app 
+sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g xfsprogs udftools git github-cli stow htop fastfetch neovim curl wget man-db man-pages texinfo flatpak firefox nautilus evince obsidian prismlauncher imv mpv obs-studio kdeconnect proton-vpn-gtk-app gcc jdk-openjdk python-pip python-ipykernel python-black nodejs hugo
 
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
@@ -10,7 +10,7 @@ rm -rf yay-bin
 
 yay -S --noconfirm --needed kime-bin clipse-bin visual-studio-code-bin
 
-flatpak install -y flathub com.usebottles.bottles com.github.tchx84.Flatseal org.onlyoffice.desktopeditors
+flatpak install -y flathub com.usebottles.bottles com.github.tchx84.Flatseal org.onlyoffice.desktopeditors us.zoom.Zoom
 
 stow background dunst hypr kime kitty uwsm waybar wofi
 
