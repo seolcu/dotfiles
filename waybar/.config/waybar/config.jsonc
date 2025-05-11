@@ -11,10 +11,10 @@
   "modules-right": [
     "tray",
     "pulseaudio",
-    "idle_inhibitor",
-    "power-profiles-daemon",
     "backlight",
-    "battery"
+    "battery",
+    "idle_inhibitor",
+    "power-profiles-daemon"
   ],
   // Modules configuration
   "hyprland/workspaces": {
@@ -28,7 +28,7 @@
   },
   "clock": {
     // "timezone": "America/New_York",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>{:%Y-%m-%d}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
   "tray": {
@@ -44,16 +44,16 @@
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " {volume}%",
     "format-source-muted": "",
     "format-icons": {
       "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "hands-free": "",
+      "headset": "",
       "phone": "",
       "portable": "",
       "car": "",
@@ -74,7 +74,7 @@
   },
   "backlight": {
     // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "battery": {
@@ -83,11 +83,11 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
+    "format": "{icon} {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
     "format-icons": ["", "", "", "", ""]
