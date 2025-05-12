@@ -26,3 +26,11 @@ Modern Hyprland rice with Catppuccin theme.
 2. clone this repo to your home directory
 3. cd into this directory
 4. run `./install.sh`
+
+## Gaming options
+
+On steam launch option:
+
+```bash
+gamemoderun gamescope -W 2560 -H 1440 -r 165 --adaptive-sync -f -- %command%
+```
