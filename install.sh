@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl pavucontrol alsa-utils wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g xfsprogs udftools git github-cli stow htop fastfetch neovim curl wget man-db man-pages texinfo flatpak breeze qt5ct kvantum-qt5 kvantum firefox nautilus evince obsidian prismlauncher neovide imv mpv obs-studio kdeconnect dolphin proton-vpn-gtk-app gcc jdk-openjdk python-pip python-ipykernel python-black nodejs hugo
+git pull
+
+sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl pavucontrol alsa-utils wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g xfsprogs udftools git github-cli stow htop fastfetch neovim starship curl wget man-db man-pages texinfo flatpak breeze qt5ct kvantum-qt5 kvantum firefox nautilus evince obsidian prismlauncher neovide imv mpv obs-studio kdeconnect dolphin proton-vpn-gtk-app gcc jdk-openjdk python-pip python-ipykernel python-black nodejs hugo
 
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
@@ -15,7 +17,8 @@ flatpak install -y flathub com.usebottles.bottles com.github.tchx84.Flatseal org
 xdg-user-dirs-update
 xdg-user-dirs-gtk-update
 
-stow Kvantum background dunst hypr kime kitty qt5ct qt6ct uwsm waybar wofi
+stow --adopt Kvantum background bash dunst hypr kime kitty qt5ct qt6ct uwsm waybar wofi
+git --reset hard
 
 systemctl --user enable hyprpolkitagent
 systemctl --user enable waybar
@@ -25,10 +28,6 @@ systemctl --user enable hypridle
 # Bluetooth
 sudo pacman -S --noconfirm --needed bluez bluez-utils blueberry
 sudo systemctl enable --now bluetooth
-
-# Starship
-sudo pacman -S --noconfirm --needed starship
-echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 # Virtualization
 sudo pacman -S --noconfirm --needed libvirt dnsmasq openbsd-netcat virt-manager qemu-full
@@ -53,10 +52,3 @@ flatpak override --user --filesystem=xdg-config/gtk-4.0
 sudo flatpak override --filesystem=xdg-config/gtk-4.0
 cd ../..
 rm -rf Catppuccin-GTK-Theme
-
-# Add Hyprland autostart script to ~/.bash_profile
-cat <<EOF >> ~/.bash_profile
-if uwsm check may-start; then
-    exec uwsm start hyprland.desktop
-fi
-EOF
