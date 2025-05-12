@@ -17,10 +17,10 @@ xdg-user-dirs-gtk-update
 
 stow background dunst hypr kime kitty uwsm waybar wofi
 
-systemctl --user enable --now hyprpolkitagent
-systemctl --user enable --now waybar
-systemctl --user enable --now hyprpaper
-systemctl --user enable --now hypridle
+systemctl --user enable hyprpolkitagent
+systemctl --user enable waybar
+systemctl --user enable hyprpaper
+systemctl --user enable hypridle
 
 # Bluetooth
 sudo pacman -S --noconfirm --needed bluez bluez-utils blueberry
