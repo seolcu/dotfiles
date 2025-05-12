@@ -1,9 +1,0 @@
-#!/bin/bash
-
-resolution=$(hyprctl monitors | sed -n '2,2p' | awk {'print $1'} | cut -d "@" -f 1)
-refresh_rate=$(hyprctl monitors | sed -n '2,2p' | awk {'print $1'} | cut -d "@" -f 2 | cut -d "." -f 1)
-
-width=${resolution%x*}
-height=${resolution#*x}
-
-gamemoderun gamescope -W $width -H $height -w $width -h $height -r $refresh_rate --adaptive-sync -f -- $1
