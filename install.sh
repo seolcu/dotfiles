@@ -15,7 +15,7 @@ flatpak install -y flathub com.usebottles.bottles com.github.tchx84.Flatseal org
 xdg-user-dirs-update
 xdg-user-dirs-gtk-update
 
-stow Kvantum background dunst hypr kime kitty qt5ct qt6ct uwsm waybar wofi
+stow Kvantum background bin dunst hypr kime kitty qt5ct qt6ct uwsm waybar wofi
 
 systemctl --user enable hyprpolkitagent
 systemctl --user enable waybar
