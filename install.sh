@@ -18,7 +18,7 @@ xdg-user-dirs-update
 xdg-user-dirs-gtk-update
 
 stow --adopt Kvantum background bash dunst hypr kime kitty qt5ct qt6ct uwsm waybar wofi
-git --reset hard
+git reset --hard
 
 systemctl --user enable hyprpolkitagent
 systemctl --user enable waybar
