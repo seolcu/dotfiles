@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl pavucontrol alsa-utils wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g xfsprogs udftools git github-cli stow htop fastfetch neovim curl wget man-db man-pages texinfo flatpak kvantum qt6ct firefox nautilus evince obsidian prismlauncher neovide imv mpv obs-studio kdeconnect proton-vpn-gtk-app gcc jdk-openjdk python-pip python-ipykernel python-black nodejs hugo
+sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl pavucontrol alsa-utils wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g xfsprogs udftools git github-cli stow htop fastfetch neovim curl wget man-db man-pages texinfo flatpak breeze qt5ct kvantum-qt5 kvantum firefox nautilus evince obsidian prismlauncher neovide imv mpv obs-studio kdeconnect dolphin proton-vpn-gtk-app gcc jdk-openjdk python-pip python-ipykernel python-black nodejs hugo
 
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
@@ -8,14 +8,14 @@ makepkg -si
 cd ..
 rm -rf yay-bin
 
-yay -S --noconfirm --needed kime-bin clipse-bin visual-studio-code-bin
+yay -S --noconfirm --needed kime-bin clipse-bin visual-studio-code-bin qt6ct-kde
 
 flatpak install -y flathub com.usebottles.bottles com.github.tchx84.Flatseal org.onlyoffice.desktopeditors us.zoom.Zoom
 
 xdg-user-dirs-update
 xdg-user-dirs-gtk-update
 
-stow background dunst hypr kime kitty uwsm waybar wofi
+stow Kvantum background dunst hypr kime kitty qt5ct qt6ct uwsm waybar wofi
 
 systemctl --user enable hyprpolkitagent
 systemctl --user enable waybar
