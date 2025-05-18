@@ -25,6 +25,10 @@ systemctl --user enable waybar
 systemctl --user enable hyprpaper
 systemctl --user enable hypridle
 
+# avahi
+sudo pacman -S --noconfirm --needed avahi nss-mdns
+sudo systemctl enable --now avahi-daemon.service
+
 # Bluetooth
 sudo pacman -S --noconfirm --needed bluez bluez-utils blueberry
 sudo systemctl enable --now bluetooth
