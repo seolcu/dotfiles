@@ -28,6 +28,7 @@ systemctl --user enable hypridle
 # avahi
 sudo pacman -S --noconfirm --needed avahi nss-mdns
 sudo systemctl enable --now avahi-daemon.service
+sudo cp nsswitch.conf /etc/nsswitch.conf
 
 # Bluetooth
 sudo pacman -S --noconfirm --needed bluez bluez-utils blueberry
