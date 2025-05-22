@@ -2,7 +2,7 @@
 
 git pull
 
-sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl pavucontrol alsa-utils wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g xfsprogs udftools git github-cli stow htop fastfetch neovim starship curl wget man-db man-pages texinfo flatpak breeze qt5ct kvantum-qt5 kvantum firefox nautilus zathura zathura-pdf-mupdf tesseract-data-kor obsidian prismlauncher neovide imv mpv obs-studio kdeconnect dolphin proton-vpn-gtk-app gcc jdk-openjdk python-pip python-ipykernel python-black nodejs npm hugo
+sudo pacman -S --noconfirm --needed hyprland kitty wofi dunst waybar power-profiles-daemon brightnessctl playerctl pavucontrol alsa-utils wl-clipboard grim slurp hyprpaper hypridle hyprlock swayosd network-manager-applet uwsm xdg-desktop-portal-hyprland hyprpolkitagent qt5-wayland qt6-wayland noto-fonts-cjk noto-fonts-emoji ttf-jetbrains-mono-nerd btrfs-progs dosfstools exfatprogs f2fs-tools ntfs-3g xfsprogs udftools git github-cli stow htop fastfetch neovim starship curl wget man-db man-pages texinfo flatpak breeze qt5ct kvantum-qt5 kvantum firefox nautilus evince tesseract-data-kor obsidian prismlauncher neovide imv mpv obs-studio kdeconnect dolphin proton-vpn-gtk-app gcc jdk-openjdk python-pip python-ipykernel python-black nodejs npm hugo
 
 git clone https://aur.archlinux.org/yay-bin
 cd yay-bin
