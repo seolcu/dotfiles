@@ -32,5 +32,5 @@ Modern Hyprland rice with Catppuccin theme.
 On steam launch option:
 
 ```bash
-gamemoderun gamescope -W 2560 -H 1440 -r 165 --adaptive-sync -f -- %command%
+DXVK_HDR=1 gamemoderun gamescope -W 2560 -H 1440 -r 165 --rt --hdr-enabled --adaptive-sync -f -- %command%
 ```
