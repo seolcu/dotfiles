@@ -29,7 +29,25 @@ Modern Hyprland rice with Catppuccin theme.
 
 ## Gaming options
 
-On steam launch option:
+Install proton-ge-custom-bin (AUR)
+
+### Non-HDR
+
+```bash
+gamemoderun %command%
+```
+
+### HDR
+
+Might have to disable Steam Input.
+
+Wine-Wayland option:
+
+```bash
+PROTON_ENABLE_WAYLAND=1 PROTON_ENABLE_HDR=1 gamemoderun %command%
+```
+
+Gamescope option:
 
 ```bash
 DXVK_HDR=1 gamemoderun gamescope -W 2560 -H 1440 -r 165 --hdr-enabled -f -- %command%
